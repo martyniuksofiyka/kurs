@@ -1,0 +1,101 @@
+/* Оформлення інтерфейсу PhotoStudio Manager */
+
+QMainWindow, QDialog { background: #f4f6fa; }
+
+QMenuBar { background: #ffffff; border-bottom: 1px solid #e3e6ec; }
+QMenuBar::item { padding: 6px 12px; background: transparent; }
+QMenuBar::item:selected { background: #eef2ff; border-radius: 4px; }
+QMenu { background: #ffffff; border: 1px solid #dfe3ea; padding: 4px; }
+QMenu::item { padding: 6px 28px 6px 24px; border-radius: 4px; }
+QMenu::item:selected { background: #4f7cff; color: white; }
+QMenu::separator { height: 1px; background: #e8ebf0; margin: 4px 8px; }
+
+QStatusBar { background: #ffffff; border-top: 1px solid #e3e6ec; color: #5b6478; }
+
+/* бічна навігація */
+QListWidget#sidebar {
+    background: #1f2433;
+    border: none;
+    padding: 16px 10px;
+    color: #c4cad8;
+    outline: 0;
+}
+QListWidget#sidebar::item { padding: 10px 12px; margin: 2px 0; border-radius: 8px; }
+QListWidget#sidebar::item:hover { background: #2a3043; color: white; }
+QListWidget#sidebar::item:selected { background: #4f7cff; color: white; }
+
+/* заголовки сторінок */
+QLabel#pageTitle { font-size: 20pt; font-weight: 600; color: #1f2433; }
+QLabel#pageSubtitle { color: #7a8294; }
+QLabel#loginTitle { font-size: 16pt; font-weight: 600; }
+
+/* картки */
+QFrame#card { background: #ffffff; border: 1px solid #e6e9ef; border-radius: 12px; }
+QLabel#cardTitle { color: #7a8294; }
+QLabel#cardValue { font-size: 20pt; font-weight: 600; color: #1f2433; }
+QLabel#cardHint { color: #9aa1ae; font-size: 9pt; }
+QLabel#cardHeader { font-weight: 600; font-size: 11pt; color: #1f2433; }
+QLabel#totalLabel { font-size: 15pt; font-weight: 700; color: #1f2433; }
+QLabel#summary { background: #ffffff; border: 1px solid #e6e9ef; border-radius: 10px; padding: 10px 12px; }
+QLabel#hint { color: #7a8294; font-size: 9pt; }
+QLabel#warningLabel {
+    background: #fff4e5; color: #8a5300; border: 1px solid #f3d19e;
+    border-radius: 8px; padding: 8px 10px;
+}
+QLabel#errorLabel { color: #d9534f; }
+
+/* кнопки */
+QPushButton {
+    background: #ffffff; border: 1px solid #d5dae3; border-radius: 8px;
+    padding: 7px 14px; color: #1f2433;
+}
+QPushButton:hover { background: #f1f4f9; border-color: #c3c9d5; }
+QPushButton:pressed { background: #e6eaf1; }
+QPushButton:disabled { color: #a9afbb; background: #f6f7f9; }
+QPushButton#primary { background: #4f7cff; border-color: #4f7cff; color: white; font-weight: 600; }
+QPushButton#primary:hover { background: #3f6cf0; }
+QPushButton#primary:disabled { background: #a9bcf5; border-color: #a9bcf5; }
+QPushButton#danger { color: #d9534f; }
+QPushButton#danger:hover { background: #fdeeee; border-color: #f0b8b6; }
+QPushButton#link { border: none; background: transparent; color: #4f7cff; padding: 2px 4px; }
+QPushButton#link:hover { text-decoration: underline; }
+
+/* поля введення */
+QLineEdit, QComboBox, QDateEdit, QTimeEdit, QSpinBox, QDoubleSpinBox, QPlainTextEdit {
+    background: #ffffff; border: 1px solid #d5dae3; border-radius: 8px; padding: 6px 8px;
+    selection-background-color: #4f7cff;
+}
+QLineEdit:focus, QComboBox:focus, QDateEdit:focus, QSpinBox:focus, QDoubleSpinBox:focus, QPlainTextEdit:focus {
+    border-color: #4f7cff;
+}
+QComboBox::drop-down, QDateEdit::drop-down { border: none; width: 22px; }
+
+/* таблиці */
+QTableView, QTableWidget {
+    background: #ffffff; border: 1px solid #e6e9ef; border-radius: 10px;
+    gridline-color: #eef0f4; alternate-background-color: #f8f9fc;
+    selection-background-color: #e3ebff; selection-color: #1f2433;
+}
+QHeaderView::section {
+    background: #f7f8fb; color: #5b6478; font-weight: 600;
+    border: none; border-bottom: 1px solid #e6e9ef; padding: 8px 8px;
+}
+
+QTabWidget::pane { border: none; }
+QTabBar::tab {
+    background: transparent; padding: 8px 18px; margin-right: 4px;
+    border-bottom: 2px solid transparent; color: #5b6478;
+}
+QTabBar::tab:selected { color: #1f2433; border-bottom: 2px solid #4f7cff; font-weight: 600; }
+
+QGroupBox { border: 1px solid #e6e9ef; border-radius: 10px; margin-top: 14px; padding-top: 10px; background: #ffffff; }
+QGroupBox::title { subcontrol-origin: margin; left: 12px; padding: 0 4px; color: #5b6478; }
+
+QScrollArea#scheduleScroll { background: transparent; }
+QSplitter::handle { background: transparent; width: 10px; }
+
+QToolTip { background: #1f2433; color: white; border: none; padding: 6px 8px; border-radius: 6px; }
+
+QCalendarWidget QWidget#qt_calendar_navigationbar { background: #ffffff; }
+QCalendarWidget QToolButton { color: #1f2433; background: transparent; padding: 4px; }
+QCalendarWidget QAbstractItemView { selection-background-color: #4f7cff; selection-color: white; }
